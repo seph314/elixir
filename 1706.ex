@@ -17,13 +17,13 @@ defmodule T1706 do
   end
 
   # 2.2 Nedan 􏰃nns de􏰃nitionen av funktionen sum/1 som summerar elementen i en lists. Skriv om fuktionen så att den är svansrekursiv.
-  def sum(l) do
+  def sum(l) do # takes a list and calls sum with two arguments, the list and a 0, to start the sumation
     sum(l, 0)
   end
-  def sum([], s) do
+  def sum([], s) do # then returns that sum
     s
   end
-  def sum([h|t], s) do
+  def sum([h|t], s) do # takes the head from the list and adds that to s, recursively until the list is empty
     sum(t, h+s)
   end
 
@@ -41,6 +41,8 @@ defmodule T1706 do
       min(left, min(right, m))
     end
   end
+
+
 
 
 
